@@ -19,6 +19,10 @@ spring:
         trace: false
         web-allow-others: false
 
+api:
+  security:
+    secret: ${JWT_SECRET:my-secret-key}
+
 logging:
   level:
     org:
