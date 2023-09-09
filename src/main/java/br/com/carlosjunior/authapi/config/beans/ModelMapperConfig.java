@@ -1,4 +1,4 @@
-package br.com.carlosjunior.authapi.config;
+package br.com.carlosjunior.authapi.config.beans;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
