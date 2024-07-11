@@ -8,7 +8,7 @@
 		<version>3.1.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.carlosjunior</groupId>
+	<groupId>br.com.victor</groupId>
 	<artifactId>auth-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>auth-api</name>
@@ -17,7 +17,6 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -81,6 +80,12 @@
 			<artifactId>java-jwt</artifactId>
 			<version>4.4.0</version>
 		</dependency>
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.30</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
