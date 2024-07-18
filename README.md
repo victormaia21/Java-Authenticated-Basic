@@ -22,29 +22,20 @@ Para começar com este projeto, siga estes passos:
 
 ## Documentação Swagger
 
-A documentação Swagger também está disponível publicamente na URL: [http://localhost:3000/api#/](http://localhost:3000/api)
+A documentação Swagger também está disponível na URL: [http://localhost:3000/api#/](http://localhost:3000/api)
 
 ## .env Example
 
 Certifique-se de criar um arquivo `.env` no diretório raiz do projeto com o seguinte conteúdo:
 
 ```dotenv
-## NestJS
-PORT=3000
-
-## Url Prisma
-DATABASE_URL="postgresql://postgres:password@localhost:5432/sistema_autenticacao?schema=public"
-
-## PostgresSQL
-DATABASE_PASSWORD=password
-DATABASE_USERNAME=postgres
-DATABASE_PORT=5432
-DATABASE_NAME=sistema_autenticacao
-DATABASE_HOST=localhost
-DATABASE_TYPE=postgres
-
-## JWT CONFIG
-TOKEN_PASSWORD=your_jwt_secret_key
-
-
+MYSQL_USER=victor
+MYSQL_PASSWORD=9345381276771
+MYSQL_DATABASE=authentication_java
+MYSQL_LOCAL_PORT=3306
+MYSQL_DOCKER_PORT=3306
+SPRING_LOCAL_PORT=8080
+SPRING_DOCKER_PORT=8080
+JWT_SECRET=2391cdismcs921
+MYSQL_HOST=mysql
 ```
