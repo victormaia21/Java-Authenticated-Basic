@@ -30,7 +30,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/auth")
 @Validated
-@Tag(name = "User", description = "Endpoint para usuário e autenticação")
+@Tag(name = "User", description = "Endpoint para user e autenticação")
 public class UserController {
 	
 	@Autowired
