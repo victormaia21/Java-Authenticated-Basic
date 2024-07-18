@@ -1,26 +1,24 @@
 package br.com.victor.authapi.domain.entities;
 
 import java.util.Collection;
-import java.util.HashSet;
+
+
+
 import java.util.Objects;
-import java.util.Set;
 import java.util.UUID;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import br.com.victor.authapi.Auditable;
-import br.com.victor.authapi.enums.Role;
 import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -34,22 +32,19 @@ public class User extends Auditable implements UserDetails {
 	private UUID id;
 	
 	@Column(nullable = false)
-	@NotEmpty(message = "Nome obrigatorio")
+	@NotNull(message = "name required")
 	private String name;
 	
-	@Email(message = "Email não valido")
+	@Email(message = "Invalid email")
 	@Column(unique = true, nullable = false)
-	@NotEmpty(message = "Email obrigatorio")
+	@NotNull(message = "Email required")
 	private String email;
 	
-	@NotEmpty(message = "Senha obrigatoria")
-    @Size(min = 8, message = "Senha precisa ter pelo menos 8 caracteres")
+    @Size(min = 8, message = "Password needs minim 8 caracteres")
     @Column(nullable = false)
+    @NotNull(message = "Password required")
 	private String password;
-	
-	@ElementCollection(fetch = FetchType.EAGER)
-	@Column(nullable = true)
-    private Set<Role> roles = new HashSet<Role>();
+
 	
 	public User() {}
 
@@ -93,14 +88,6 @@ public class User extends Auditable implements UserDetails {
 		this.password = password;
 	}
 
-	public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
-    
 	@Override
 	public int hashCode() {
 		return Objects.hash(email, id);

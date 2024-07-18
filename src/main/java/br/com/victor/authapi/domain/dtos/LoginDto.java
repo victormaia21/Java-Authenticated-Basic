@@ -1,8 +1,15 @@
 package br.com.victor.authapi.domain.dtos;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+
 public class LoginDto {
 
+	@NotNull(message = "Email required")
+	@Email(message = "Invalid email")
     private String email;
+
+	@NotNull(message = "Password required")
     private String password;
 
     public LoginDto(String email, String password) {
