@@ -16,8 +16,11 @@ Para começar com este projeto, siga estes passos:
 
 ## Getting started with Docker
 
-1. Inicie o Docker: `docker-compose up --build`
-2. Acesse a documentação Swagger: `http://localhost:8080/swagger-ui/index.html`
+1. Copie o arquivo `.env.example` para `.env` e preencha os valores necessários.
+2. Configure a conexão com o banco de dados no arquivo `.env`.
+3. Modifique o arquivo `application.yml` na pasta `resources` com as configurações de banco de dados correta
+4. Inicie o Docker: `docker-compose up --build`
+5. Acesse a documentação Swagger: `http://localhost:8080/swagger-ui/index.html`
 
 ## Documentação Swagger
 

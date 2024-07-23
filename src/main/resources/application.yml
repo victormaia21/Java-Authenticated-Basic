@@ -24,7 +24,7 @@ spring:
 
 api:
   security:
-    secret: ${JWT_SECRET:2391cdismcs921}
+    secret: ${JWT_SECRET:fjwefi232x83xmu8e23udsfjwifj23847823}
     
 springdoc:
   api-docs:
