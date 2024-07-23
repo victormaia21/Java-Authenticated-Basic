@@ -25,6 +25,9 @@ WORKDIR /app
 # Copia o arquivo JAR do aplicativo Spring Boot da etapa de construção para o contêiner
 COPY --from=build /app/target/*.jar app.jar
 
+# Copia o arquivo .env para o contêiner
+COPY .env .env
+
 # Expõe a porta definida para o Spring Boot
 EXPOSE 8080
 

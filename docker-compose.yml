@@ -3,6 +3,8 @@ services:
   mysql:
     image: mysql:latest
     container_name:  mysql_database
+    env_file:
+      - ./.env
     environment:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
@@ -15,6 +17,9 @@ services:
 
   spring-boot-app:
     build: .
+    env_file:
+      - ./.env
+
     ports:
       - "${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}"
     environment:
